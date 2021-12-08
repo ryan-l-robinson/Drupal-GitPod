@@ -1,29 +1,23 @@
-#uses image defined in the Dockerfile
 image:
   file: .gitpod/Dockerfile
 
-
+#Tasks here are the specific installation of this site, while the Dockerfile is a general Drupal LAMP stack
 tasks:
   - init: |
-      sudo cp /workspace/Drupal-GitPod/.gitpod/conf/apache2.conf /etc/apache2/apache2.conf
-      sudo cp /workspace/Drupal-GitPod/.gitpod/conf/php.ini /etc/php/8.0/apache2/php.ini
       sudo mysql -e "CREATE DATABASE IF NOT EXISTS drupal"
-      echo "alias drush=/workspace/Drupal-GitPod/vendor/drush/drush/drush" >> ~/.bashrc
-      echo "alias drush content-sync:export=drush content-sync:export --entity-types:block_content,file,menu_link_content,node" >> ~/.bashrc
-      source ~/.bashrc
-      curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-      sudo apt-get install -y nodejs libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm-amdgpu1 libxkbcommon-x11-0 libxcomposite-dev libxdamage-dev libxrandr-dev libgbm-dev libgtk-3-common libxshmfence-dev
-      sudo npm install pa11y-ci -g --unsafe-perm=true --allow-root
       composer install
-      sudo cp /workspace/Drupal-GitPod/.gitpod/conf/drupal.settings.php /workspace/Drupal-GitPod/web/sites/default/settings.php
+      sudo cp .gitpod/conf/drupal.settings.php web/sites/default/settings.php
       vendor/drush/drush/drush -y site-install minimal --existing-config
       vendor/drush/drush/drush -y content-sync:import
-      apachectl restart
+    command: |
+      apachectl start
 
 ports:
   - port: 8001
     onOpen: open-browser
   - port: 8828
+    onOpen: ignore
+  - port: 8829
     onOpen: ignore
   - port: 3306
     onOpen: ignore
