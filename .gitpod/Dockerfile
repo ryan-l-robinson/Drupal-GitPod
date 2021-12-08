@@ -5,7 +5,6 @@ USER root
 SHELL ["/bin/bash", "-c"]
 
 # Install other needed packages
-RUN sudo add-apt-repository -y ppa:ondrej/apache2
 RUN sudo apt update
 RUN sudo apt install -y php-pear php-apcu php-json php-xdebug build-essential
 RUN sudo pecl install apcu
