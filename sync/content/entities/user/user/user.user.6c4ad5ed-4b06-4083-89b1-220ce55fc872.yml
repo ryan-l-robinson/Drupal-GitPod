@@ -1,0 +1,32 @@
+uuid:
+  -
+    value: 6c4ad5ed-4b06-4083-89b1-220ce55fc872
+langcode:
+  -
+    value: en
+name:
+  -
+    value: admin
+created:
+  -
+    value: '2021-12-12T21:57:52+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2021-12-12T21:57:52+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+_content_sync:
+  entity_type: user
+pass:
+  -
+    value: $S$EXi2cAUTByfJcVvt8MHATL/m0mhxD1CkOhpO/QV.UmM4PFbZbF.I
+    pre_hashed: true
+mail:
+  value: admin@example.com
+status:
+  value: '1'
+roles:
+  - authenticated

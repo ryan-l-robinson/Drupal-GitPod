@@ -6,5 +6,6 @@ module:
   serialization: 0
   system: 0
   user: 0
-theme: {  }
+theme:
+  claro: 0
 profile: minimal
