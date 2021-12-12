@@ -22,6 +22,7 @@
         "drush/drush": "^10.6"
     },
     "require-dev": {
+        "drupal/content_sync": "^2.1",
         "drupal/core-dev": "^9.1"
     },
     "conflict": {
