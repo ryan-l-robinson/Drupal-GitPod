@@ -1,19 +1,19 @@
 uuid:
   -
-    value: 6c4ad5ed-4b06-4083-89b1-220ce55fc872
+    value: 8eaf81ad-4eeb-4d0f-af84-59dd831e927c
 langcode:
   -
     value: en
 name:
   -
-    value: admin
+    value: drupal_admin
 created:
   -
-    value: '2021-12-12T21:57:52+00:00'
+    value: '2021-12-19T22:48:35+00:00'
     format: 'Y-m-d\TH:i:sP'
 changed:
   -
-    value: '2021-12-12T21:57:52+00:00'
+    value: '2021-12-19T22:51:18+00:00'
     format: 'Y-m-d\TH:i:sP'
 default_langcode:
   -
@@ -22,7 +22,7 @@ _content_sync:
   entity_type: user
 pass:
   -
-    value: $S$EXi2cAUTByfJcVvt8MHATL/m0mhxD1CkOhpO/QV.UmM4PFbZbF.I
+    value: $S$EZyxYVuBNIdouHym2qOyeDPKD/34JhSaMM0e6Rg4b2BTIeNqsJor
     pre_hashed: true
 mail:
   value: admin@example.com

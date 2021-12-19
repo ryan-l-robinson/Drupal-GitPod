@@ -1,11 +1,16 @@
-uuid: 8b435692-66a0-497a-87d2-296d50019a56
+uuid: dd0cf097-9a03-4628-9cc1-90a3fa376661
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
+    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
 label: 'Authenticated user'
 weight: 1
 is_admin: false
-permissions: {  }
+permissions:
+  - 'access content'
+  - 'view media'
