@@ -8,5 +8,5 @@ This provides a base Drupal site that can function within [GitPod](https://gitpo
 1. Olivero theme won't install at all, citing a missing block.
 
 ## Default Admin User
-Username: admin
-Password: [generated on site-install]
+Username: drupal_admin
+Password: ZNB*ufm1tyz4rwc@yzk
