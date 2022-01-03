@@ -1,12 +1,12 @@
 image:
-  file: .gitpod/Dockerfile
+  file: .Dockerfile
 
 #Tasks here are the specific installation of this site, while the Dockerfile is a general Drupal LAMP stack
 tasks:
   - init: |
       sudo mysql -e "CREATE DATABASE IF NOT EXISTS drupal"
       composer install
-      sudo cp .gitpod/conf/drupal.settings.php web/sites/default/settings.php
+      sudo cp conf/drupal.settings.php web/sites/default/settings.php
       vendor/drush/drush/drush -y site-install minimal --existing-config
       vendor/drush/drush/drush -y content-sync:import
     command: |
