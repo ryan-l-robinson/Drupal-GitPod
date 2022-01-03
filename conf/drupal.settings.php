@@ -219,7 +219,7 @@ $databases['default']['default'] = [
  */
 
 $databases['default']['default'] = array (
-  'database' => 'library',
+  'database' => 'drupal',
   'username' => 'root',
   'password' => '',
   'prefix' => '',
@@ -732,8 +732,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
 $settings['trusted_host_patterns'] = [
   '^.+\.gitpod\.io$',
-  '^localhost$',
-  '^local\.library\.wlu\.ca$',
+  '^localhost$'
 ];
 
 /**
