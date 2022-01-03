@@ -5,9 +5,9 @@ image:
 #TODO: adding the drush alias does not work. It does if running those commands manually after.
 tasks:
   - init: |
-      sudo mysql -e "CREATE DATABASE IF NOT EXISTS library"
+      sudo mysql -e "CREATE DATABASE IF NOT EXISTS drupal"
       composer install
-      sudo cp /workspace/library.wlu.ca-drupal-9/conf/drupal.settings.php /workspace/library.wlu.ca-drupal-9/web/sites/default/settings.php
+      sudo cp conf/drupal.settings.php web/sites/default/settings.php
       vendor/drush/drush/drush -y site-install minimal --existing-config
       vendor/drush/drush/drush -y content-sync:import --entity-types=block_content,file,node
       home_id=$(vendor/drush/drush/drush sql-query 'SELECT nid FROM node_field_data where type="home" and status="1" and title="Home" limit 1;')
@@ -15,7 +15,7 @@ tasks:
       then
         vendor/drush/drush/drush cset -y system.site page.front /node/$home_id
       fi
-      echo 'alias drush="/workspace/library.wlu.ca-drupal-9/vendor/drush/drush/drush"' >> ~/.bashrc
+      echo 'alias drush="/workspace/drupal-gitpod/vendor/drush/drush/drush"' >> ~/.bashrc
       vendor/drush/drush/drush php-eval 'node_access_rebuild();'
       vendor/drush/drush/drush cron
     command: |
