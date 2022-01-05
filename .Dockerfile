@@ -25,7 +25,7 @@ RUN php -r "unlink('composer-setup.php');"
 RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh
 RUN apt-get install -y nodejs libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm-amdgpu1 libxkbcommon-x11-0 libxcomposite-dev libxdamage-dev libxrandr-dev libgbm-dev libgtk-3-common libxshmfence-dev libasound2
-RUN npm install pa11y-ci -g --unsafe-perm=true --allow-root
+RUN npm install pa11y -g --unsafe-perm=true --allow-root
 
 # Expose Apache and MySQL
 EXPOSE 80
