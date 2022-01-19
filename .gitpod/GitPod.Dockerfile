@@ -10,11 +10,8 @@ RUN apt update
 RUN sudo apt install -y php-pear php-apcu php-json php-xdebug build-essential mysql-client sendmail
 RUN pecl install apcu
 RUN pecl install uploadprogress
-#switch to PHP 7.4, but would have to install 7.4 first, which is not currently working
-#RUN echo "2" | update-alternatives --config php
 
 #Copy configuration files
-COPY .gitpod/php.ini /etc/php/7.4/apache2/php.ini
 COPY .gitpod/php.ini /etc/php/8.0/apache2/php.ini
 COPY .gitpod/apache2.conf /etc/apache2/apache2.conf
 
