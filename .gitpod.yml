@@ -1,5 +1,5 @@
 image:
-  file: .Dockerfile
+  file: .gitpod/GitPod.Dockerfile
 
 #Tasks here are the specific installation of this site, while the Dockerfile is a general Drupal LAMP stack
 #TODO: adding the drush alias does not work. It does if running those commands manually after.
