@@ -28,8 +28,6 @@ RUN php -r "unlink('composer-setup.php');"
 RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh
 RUN apt-get install -y nodejs libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm-amdgpu1 libxkbcommon-x11-0 libxcomposite-dev libxdamage-dev libxrandr-dev libgbm-dev libgtk-3-common libxshmfence-dev software-properties-common
-RUN add-apt-repository ppa:phd.re/chromium-browser
-RUN apt-get update
 RUN apt-get install -y apparmor libudev1 snapd squashfs-tools udev apparmor-profiles-extra apparmor-utils fuse zenity kdialog chromium-browser libappindicator1 fonts-liberation
 RUN npm install pa11y -g --unsafe-perm=true --allow-root
 
