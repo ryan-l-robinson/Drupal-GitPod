@@ -7,12 +7,13 @@ SHELL ["/bin/bash", "-c"]
 # Install other needed packages
 RUN add-apt-repository -y ppa:ondrej/apache2
 RUN apt update
+RUN update-alternatives --set php /usr/bin/php8.0
 RUN sudo apt install -y php-pear php-apcu php-json php-xdebug build-essential sendmail
 RUN pecl install apcu
 RUN pecl install uploadprogress
 
 #Copy configuration files
-COPY .gitpod/php.ini /etc/php/8.1/apache2/php.ini
+COPY .gitpod/php.ini /etc/php/8.0/apache2/php.ini
 COPY .gitpod/apache2.conf /etc/apache2/apache2.conf
 
 # Install latest composer
