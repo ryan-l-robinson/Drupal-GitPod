@@ -47,7 +47,6 @@ vscode:
   extensions:
     - eamodio.gitlens
     - skippednote.VS-code-drupal
-    - gitlab.gitlab-workflow
     - cweijan.vscode-mysql-client2
     - esbenp.prettier-vscode
     - gruntfuggly.todo-tree
