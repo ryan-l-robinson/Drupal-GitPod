@@ -2,12 +2,11 @@ image:
   file: .gitpod/GitPod.Dockerfile
 
 #Tasks here are the specific installation of this site, while the Dockerfile is a general Drupal LAMP stack
-#TODO: adding the drush alias does not work. It does if running those commands manually after.
 tasks:
   - init: |
       sudo mysql -e "CREATE DATABASE IF NOT EXISTS drupal"
       composer install
-      sudo cp conf/drupal.settings.php web/sites/default/settings.php
+      sudo cp .gitpod/drupal.settings.php web/sites/default/settings.php
       vendor/drush/drush/drush -y site-install minimal --existing-config
       vendor/drush/drush/drush -y content-sync:import --entity-types=block_content,file,node
       home_id=$(vendor/drush/drush/drush sql-query 'SELECT nid FROM node_field_data where type="home" and status="1" and title="Home" limit 1;')
