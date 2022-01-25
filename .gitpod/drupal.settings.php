@@ -20,7 +20,7 @@
  * The configuration directory will be discovered by stripping the website's
  * hostname from left to right and pathname from right to left. The first
  * configuration file found will be used and any others will be ignored. If no
- * other configuration file is found then the default configuration file at
+ * other configuration file is found then the configuration file at
  * 'sites/default' will be used.
  *
  * For example, for a fictitious site installed at
@@ -57,47 +57,6 @@
  * register custom, site-specific service definitions and/or swap out default
  * implementations with custom ones.
  */
-
-/**
- * Database settings:
- *
- * The $databases array specifies the database connection or
- * connections that Drupal may use.  Drupal is able to connect
- * to multiple databases, including multiple types of databases,
- * during the same request.
- *
- * One example of the simplest connection array is shown below. To use the
- * sample settings, copy and uncomment the code below between the @code and
- * @endcode lines and paste it after the $databases declaration. You will need
- * to replace the database username and password and possibly the host and port
- * with the appropriate credentials for your database system.
- *
- * The next section describes how to customize the $databases array for more
- * specific needs.
- *
- * @code
- * $databases['default']['default'] = [
- *   'database' => 'databasename',
- *   'username' => 'sqlusername',
- *   'password' => 'sqlpassword',
- *   'host' => 'localhost',
- *   'port' => '3306',
- *   'driver' => 'mysql',
- *   'prefix' => '',
- *   'collation' => 'utf8mb4_general_ci',
- * ];
- * @endcode
- */
-$databases['default']['default'] = [
-  'database' => 'drupal',
-  'username' => 'root',
-  'password' => 'root',
-  'host' => 'localhost',
-  'port' => '3306',
-  'driver' => 'mysql',
-  'prefix' => '',
-  'collation' => 'utf8mb4_general_ci',
-];
 
 /**
  * Customizing database settings.
@@ -735,6 +694,12 @@ $settings['trusted_host_patterns'] = [
   '^localhost$'
 ];
 
+ /**
+  * Used to track what domains you're logged into
+  * Set to * to accept any GitPod domain
+  */
+$cookie_domain = '*';
+
 /**
  * The default list of directories that will be ignored by Drupal's file API.
  *
@@ -799,6 +764,3 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-
-#Used to track what domains you're logged into
-$cookie_domain = '*';
