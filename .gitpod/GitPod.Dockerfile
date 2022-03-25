@@ -6,8 +6,8 @@ SHELL ["/bin/bash", "-c"]
 
 # Install other needed packages
 RUN add-apt-repository -y ppa:ondrej/php
-RUN apt update
-RUN sudo apt install -y php-pear php-apcu php-json php-xdebug build-essential sendmail
+RUN add-apt-repository -y ppa:ondrej/apache2
+RUN sudo apt install -y php-mysql curl php-curl php-gd php-mbstring php-pear php-apcu php-json php-xdebug build-essential sendmail
 RUN pecl install apcu
 RUN pecl install uploadprogress
 
