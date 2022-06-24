@@ -5,6 +5,7 @@ USER root
 SHELL ["/bin/bash", "-c"]
 
 # Install other needed packages
+RUN sudo apt install ca-certificates apt-transport-https software-properties-common -y
 RUN add-apt-repository -y ppa:ondrej/php
 RUN add-apt-repository -y ppa:ondrej/apache2
 RUN sudo apt update -y
