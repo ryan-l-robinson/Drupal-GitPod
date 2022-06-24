@@ -16,6 +16,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   field: 0
+  field_layout: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -27,6 +28,8 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  module_filter: 0
+  mysql: 0
   node: 0
   options: 0
   page_cache: 0
@@ -37,6 +40,7 @@ module:
   serialization: 0
   settings_tray: 0
   system: 0
+  taxonomy: 0
   telephone: 0
   text: 0
   toolbar: 0
