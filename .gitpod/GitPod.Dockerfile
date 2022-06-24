@@ -9,7 +9,7 @@ RUN add-apt-repository -y ppa:ondrej/php
 RUN add-apt-repository -y ppa:ondrej/apache2
 RUN sudo apt update -y
 RUN sudo apt upgrade -y
-RUN sudo apt install php8.1 libapache2-mod-php8.1
+RUN sudo apt install php8.1
 RUN sudo apt install -y php-mysql curl php-curl php-gd php-mbstring php-pear php-apcu php-json php-xdebug build-essential sendmail
 RUN pecl install apcu
 RUN pecl install uploadprogress
