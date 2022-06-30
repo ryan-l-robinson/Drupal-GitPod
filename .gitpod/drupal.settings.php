@@ -687,13 +687,13 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * @endcode
  * will allow the site to run off of all variants of example.com and
  * example.org, with all subdomains included.
- */
+
 
 $settings['trusted_host_patterns'] = [
-  '^.+\.gitpod\.io$',
+  '^.+\.^.+\.gitpod\.io$',
   '^localhost$'
 ];
-
+ */
  /**
   * Used to track what domains you're logged into
   * Set to * to accept any GitPod domain
