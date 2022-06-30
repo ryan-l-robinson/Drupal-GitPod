@@ -333,7 +333,7 @@ $settings['update_free_access'] = FALSE;
 # $settings['reverse_proxy_addresses'] = ['a.b.c.d', ...];
 
 /**
- * Reverse proxy trusted headers.
+ * Reverse proxy headers.
  *
  * Sets which headers to trust from your reverse proxy.
  *
@@ -688,12 +688,12 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * will allow the site to run off of all variants of example.com and
  * example.org, with all subdomains included.
 
-
+ */
 $settings['trusted_host_patterns'] = [
   '^.+\.^.+\.gitpod\.io$',
   '^localhost$'
 ];
- */
+
  /**
   * Used to track what domains you're logged into
   * Set to * to accept any GitPod domain
