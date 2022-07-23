@@ -690,7 +690,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
  */
 $settings['trusted_host_patterns'] = [
-  '^.+\.^.+\.gitpod\.io$',
+  '^.+\.gitpod\.io$',
   '^localhost$'
 ];
 

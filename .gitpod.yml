@@ -16,7 +16,7 @@ tasks:
         vendor/drush/drush/drush cset -y system.site page.front /node/$home_id
       fi
       vendor/drush/drush/drush user:password admin "ZNB*ufm1tyz4rwc@yzk"
-      echo 'alias drush="/workspace/drupal-gitpod/vendor/drush/drush/drush"' >> ~/.bashrc
+      echo 'alias drush="/workspace/Drupal-GitPod/vendor/drush/drush/drush"' >> ~/.bashrc
       vendor/drush/drush/drush php-eval 'node_access_rebuild();'
       vendor/drush/drush/drush cron
     command: |
