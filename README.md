@@ -21,5 +21,4 @@ Password: ZNB*ufm1tyz4rwc@yzk
 
 ## TODO
 
-- Upgrade to PHP 8.0 or 8.1
 - Add XDebug for PHP testing
