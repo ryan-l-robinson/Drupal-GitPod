@@ -9,7 +9,6 @@ tasks:
       sudo cp .gitpod/drupal.settings.php web/sites/default/settings.php
       sudo cp .gitpod/local.services.yml web/sites/local.services.yml
       vendor/drush/drush/drush -y site-install minimal --existing-config
-      vendor/drush/drush/drush -y content-sync:import --entity-types=block_content,file,node
       home_id=$(vendor/drush/drush/drush sql-query 'SELECT nid FROM node_field_data where type="home" and status="1" and title="Home" limit 1;')
       if [[ ! -z ${home_id} ]]
       then

@@ -10,7 +10,7 @@ This provides a base Drupal site that can function within [GitPod](https://gitpo
 
 ## Includes
 
-- PHP 7.4 and PHP extensions recommended for Drupal 9: APCU and UploadProgress
+- PHP 8.1 and PHP extensions recommended for Drupal 9: APCU and UploadProgress
 - Latest version of composer.
 - Pa11y accessibility testing tool.
 - module_filter and content_sync modules.
