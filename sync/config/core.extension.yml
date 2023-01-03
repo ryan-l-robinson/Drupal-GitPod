@@ -24,6 +24,9 @@ module:
   file: 0
   filter: 0
   image: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0

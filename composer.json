@@ -21,6 +21,7 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
+        "drupal/jquery_ui_autocomplete": "^2.0",
         "drupal/module_filter": "^4.0",
         "drush/drush": "^10.0"
     },

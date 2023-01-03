@@ -16,7 +16,7 @@ This provides a base Drupal site that can function within [GitPod](https://gitpo
 - module_filter and content_sync modules.
 
 ## Default Admin User
-Username: drupal_admin
+Username: admin
 Password: ZNB*ufm1tyz4rwc@yzk
 
 ## TODO
