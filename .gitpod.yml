@@ -32,17 +32,6 @@ ports:
   - port: 3306
     onOpen: ignore
 
-github:
-  prebuilds:
-    master: true
-    branches: true
-    pullRequests: true
-    pullRequestsFromForks: true
-    addCheck: true
-    addComment: false
-    addBadge: true
-    addLabel: true
-
 vscode:
   extensions:
     - eamodio.gitlens

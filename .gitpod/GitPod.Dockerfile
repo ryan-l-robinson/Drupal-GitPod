@@ -9,13 +9,13 @@ RUN add-apt-repository -y ppa:ondrej/php
 RUN add-apt-repository -y ppa:ondrej/apache2
 RUN sudo apt update -y
 RUN sudo apt upgrade -y
-RUN sudo update-alternatives --set php $(which php8.1)
-RUN sudo apt install -y php8.1-mysql curl php8.1-curl php8.1-gd php8.1-mbstring php-pear php-apcu php-json php-xdebug build-essential sendmail
+RUN sudo update-alternatives --set php $(which php8.3)
+RUN sudo apt install -y php8.3-mysql curl php8.3-curl php8.3-gd php8.3-mbstring php-pear php-apcu php-json php-xdebug build-essential sendmail
 RUN pecl install apcu
 RUN pecl install uploadprogress
 
 #Copy configuration files
-COPY .gitpod/php.ini /etc/php/8.1/apache2/php.ini
+COPY .gitpod/php.ini /etc/php/8.3/apache2/php.ini
 COPY .gitpod/apache2.conf /etc/apache2/apache2.conf
 
 # Install latest composer
