@@ -1,5 +1,7 @@
 ## Overview
 
+Update: as GitPod has transitioned to Ona, combined with me having better solutions running Docker locally, I will no longer be maintaining any of these GitPod demo repositories.
+
 This provides a base Drupal site that can function within [GitPod](https://gitpod.io).
 
 ## Usage
